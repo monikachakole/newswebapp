@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(to right, orange, pink);
+}
+
+.box {
+  width: 1200px;
+  border: 1px solid white;
+  margin: 74px auto;
+  background: white;
+}
+
+/*.kingDiv {
+  margin-left: 4px;
+  background-size: contain;
+}*/
+
+/* Header */
+
+.inBlock {
+  display: inline-block;
+  margin-left: 80px;
+  margin-top: 20px;
+  color: #afa7a7;
+  cursor: pointer;
+}
+
+.firstDiv {
+  margin-left: 130px;
+  vertical-align: top;
+}
+
+.header {
+  width: 1200px;
+  height: 63px;
+  background: #fbf4f4;
+}
+
+.inBlock:hover {
+  color: #584343;
+}
+
+.inBlock:active {
+  color: orange;
+}
+
+/* Header End */
+
+/* For Loop */
+
+.sourceIddiv,
+.sourceNamediv,
+.authordiv,
+.titlediv,
+.descriptiondiv,
+.urldiv,
+.image,
+.publishedAtdiv,
+.contentdiv {
+  width: 320px;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+/* For Loop End */
+
+/* JS File */
+
+.column image {
+  vertical-align: sub;
+}
+
+.titlediv {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.authordiv {
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.sourceNamediv {
+  color: #c5b8b8;
+}
+
+.container {
+  margin-top: 35px;
+  margin-left: 13px;
+}
+
+/* JS File End */
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background: #232222;
+}
+
+.footerCol1,
+.footerCol2 {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.footerCol1 i {
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  background: #40403e;
+  padding: 10px;
+  text-align: center;
+}
+
+.footerCol1 {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.span1 {
+  color: white;
+  font-size: 20px;
+  margin-left: 18px;
+  vertical-align: top;
+}
+
+.span2 {
+  color: white;
+  margin-left: 71px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.phoneNo span {
+  color: white;
+  margin-left: 16px;
+  font-weight: bold;
+}
+
+.mail span {
+  color: #667ae4;
+  margin-left: 18px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mail {
+  margin-top: 35px;
+}
+
+.phoneNo {
+  margin-top: 20px;
+}
+
+.footerCol2 {
+  margin-right: 100px;
+}
+
+.footerCol2 h2 {
+  margin-top: 48px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.footerCol2 p {
+  color: #a3a7a3;
+  width: 400px;
+}
+
+.footerCol2 i {
+  width: 20px;
+  height: 20px;
+  color: white;
+  background: #40403e;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  margin-left: 7px;
+}
+
+.footerCol2 div {
+  margin-top: 33px;
+}
+
+/* Footer End */

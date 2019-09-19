@@ -1,0 +1,7 @@
+1. by default photo if photo not appear
+2. Show selected news category
+3. overlpapping not allowed
+4. Default some category should be selected
+5. Show 'loading news' message
+6.if null dont show
+7. Add header and footer to website
