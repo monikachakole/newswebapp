@@ -9,10 +9,47 @@ body {
   background: white;
 }
 
-/*.kingDiv {
-  margin-left: 4px;
-  background-size: contain;
-}*/
+.kingDiv {
+  vertical-align: top;
+}
+
+/* Initial Header */
+
+.boxHeader {
+  background: #232222;
+}
+
+.initialHeader {
+  padding: 25px;
+  color: white;
+  width: 60%;
+}
+
+.initialHeader span {
+  margin-left: 80px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.initialHeader span:hover {
+  color: #9c8d8d;
+}
+
+.boxHeader div {
+  display: inline-block;
+}
+
+.initialHeader2 input {
+  width: 188px;
+  height: 30px;
+  background: #f1ecec;
+}
+
+.initialHeader2 {
+  margin-left: 165px;
+}
+
+/* Initial Header Ends */
 
 /* Header */
 
@@ -39,24 +76,14 @@ body {
   color: #584343;
 }
 
-.inBlock:active {
-  color: orange;
-}
-
 /* Header End */
 
 /* For Loop */
 
-.sourceIddiv,
-.sourceNamediv,
-.authordiv,
-.titlediv,
-.descriptiondiv,
-.urldiv,
-.image,
-.publishedAtdiv,
-.contentdiv {
+.image {
   width: 320px;
+  height: 205px;
+  object-fit: cover; /* Fit image in height:205px */
   margin-left: 50px;
   margin-top: 5px;
 }
@@ -66,12 +93,15 @@ body {
 /* JS File */
 
 .column image {
-  vertical-align: sub;
+  vertical-align: top;
 }
 
 .titlediv {
   margin-bottom: 30px;
   font-size: 20px;
+  width: 320px;
+  margin-left: 50px;
+  margin-top: 5px;
 }
 
 .inlineBlock {
@@ -81,10 +111,17 @@ body {
 .authordiv {
   font-weight: bold;
   font-size: 27px;
+  width: 320px;
+  margin-left: 50px;
+  margin-top: 5px;
+  overflow-wrap: break-word;
 }
 
 .sourceNamediv {
   color: #c5b8b8;
+  width: 30px;
+  margin-left: 50px;
+  margin-top: 5px;
 }
 
 .container {
@@ -100,6 +137,7 @@ body {
   display: flex;
   flex-direction: row;
   background: #232222;
+  margin-top: 410px;
 }
 
 .footerCol1,
@@ -193,3 +231,46 @@ body {
 }
 
 /* Footer End */
+
+.alert {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #40403e;
+  margin-top: 140px;
+  cursor: progress;
+}
+
+/* For Loader */
+
+/* .alert {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Loader End */

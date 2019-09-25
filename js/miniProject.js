@@ -1,115 +1,94 @@
 var containerDiv = $(".container");
+var alertDiv = $(".alert");
+var apiKey = "&apiKey=8c8c8bc1dd2f4832aac04c52ec954686";
 
 $(document).ready(function() {
-  $("#business").click(function() {
+  //alertDiv.html("Please Wait While Loading News..");
+
+  $(".navigation-menu").click(function() {
+    $(".navigation-menu").css("color", "#afa7a7");
+    $(this).css("color", "orange");
+    alertDiv.html("Please Wait loading News..");
     containerDiv.html(" ");
+    $(this).attr("id");
     $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=business&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
+      url: "https://newsapi.org/v2/top-headlines?category=" + this.id + apiKey,
       method: "GET",
       success: function(data) {
         createNews(data);
+      },
+      error: function(data) {
+        alertDiv.html("Cannot load news now. Please try later!!!");
       }
     });
   });
 
-  $("#entertainment").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
-      }
-    });
+  $(".container").on("click", "div", function() {
+    alert("new page");
+    //window.open($(this).attr("href"), '_blank');
+    window.open("news_details.html");
+    //window.open("#").document.write("hey");
+    //containerDiv.append("This is new page");
   });
 
-  $("#general").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=general&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
-      }
-    });
-  });
+  function createNews(data) {
+    for (var i = 0; i < data.articles.length; i++) {
+      var article = data.articles[i];
 
-  $("#health").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=health&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
+      if (article.author == null) {
+        article.author = "";
       }
-    });
-  });
 
-  $("#science").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=science&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
-      }
-    });
-  });
+      // if(article.urlToImage == null){
+      //   article.urlToImage = url(image/default.png);
+      // }
 
-  $("#sports").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=sports&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
-      }
-    });
-  });
+      var details =
+        "<div class='kingDiv inlineBlock'>" +
+        "<img class='image inlineBlock' src='" +
+        article.urlToImage +
+        "' />" +
+        "<br>" +
+        "<div class='sourceNamediv inlineBlock'>" +
+        article.source.name +
+        "</div>" +
+        "<br>" +
+        "<div class='authordiv inlineBlock'>" +
+        article.author +
+        "</div>" +
+        "<br>" +
+        "<div class='titlediv inlineBlock'>" +
+        article.title +
+        "</div>" +
+        "<br>" +
+        "</div>";
 
-  $("#technology").click(function() {
-    containerDiv.html(" ");
-    $.ajax({
-      url:
-        "https://newsapi.org/v2/top-headlines?category=technology&apiKey=8c8c8bc1dd2f4832aac04c52ec954686",
-      method: "GET",
-      success: function(data) {
-        createNews(data);
-      }
-    });
-  });
+      alertDiv.html("");
+      containerDiv.append(details);
+    }
+  }
 });
 
-function createNews(data) {
-  for (var i = 0; i < data.articles.length; i++) {
-    var article = data.articles[i];
+// $.ajax({
+//   url: "https://newsapi.org/v2/top-headlines?category=" + this.id + apiKey,
+//   method: "GET",
+//   success: function(data) {
+//     createNews(data);
+//   },
+//   error: function(data) {
+//     alertDiv.html("Cannot load news now. Please try later!!!");
+//   }
+// });
 
-    var details =
-      "<div class='kingDiv inlineBlock'>" +
-      "<img class='image inlineBlock' src='" +
-      article.urlToImage +
-      "' />" +
-      "<br>" +
-      "<div class='sourceNamediv inlineBlock'>" +
-      article.source.name +
-      "</div>" +
-      "<br>" +
-      "<div class='authordiv inlineBlock'>" +
-      article.author +
-      "</div>" +
-      "<br>" +
-      "<div class='titlediv inlineBlock'>" +
-      article.title +
-      "</div>" +
-      "<br>" +
-      "</div>";
+// var request = $.ajax({
+//   method: "GET",
+//   url: "https://newsapi.org/v2/top-headlines?category=" + this.id + apiKey
+// });
 
-    containerDiv.append(details);
-  }
-}
+// request.done(function(data) {
+//   createNews(data);
+// });
+
+// request.fail(function(data) {
+//   alertDiv.html("Cannot load news now. Please try later!!!");
+// });

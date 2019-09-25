@@ -1,0 +1,23 @@
+
+// Function defination
+// Arguments
+function add(number1, number2){
+    return number1*number2;
+}
+
+// Function call
+add(3, 5);
+
+// Ananomous function
+function(){}
+
+
+// Objects
+{
+    key1: number,
+    key2: array,
+    key3: function,
+    key4: other object
+}
+
+

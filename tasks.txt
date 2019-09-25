@@ -1,7 +1,16 @@
-1. by default photo if photo not appear
-2. Show selected news category
-3. overlpapping not allowed
-4. Default some category should be selected
-5. Show 'loading news' message
-6.if null dont show
-7. Add header and footer to website
+1. by default photo if photo not appear- wip
+2. Highlight selected category which loads on site load
+3. repeatation code to be removed
+4.footer should not stick header - done
+8. Show animated loading message - done
+9. News detail page
+10. news search.
+11. add header - done
+12. open details page in same tab
+
+
+Later- 
+
+1.image loading should be shown
+2.if youtube url play video on our site
+3.Every category should have separate url
