@@ -3,7 +3,9 @@ var alertDiv = $(".alert");
 var apiKey = "&apiKey=8c8c8bc1dd2f4832aac04c52ec954686";
 
 $(document).ready(function() {
-  //alertDiv.html("Please Wait While Loading News..");
+  alertDiv.html("Please Wait While Loading News..");
+  ajaxMatter("https://newsapi.org/v2/top-headlines?category=business" + apiKey);
+  $("#business").css("color", "orange");
 
   $(".navigation-menu").click(function() {
     $(".navigation-menu").css("color", "#afa7a7");
@@ -11,8 +13,14 @@ $(document).ready(function() {
     alertDiv.html("Please Wait loading News..");
     containerDiv.html(" ");
     $(this).attr("id");
-    $.ajax({
-      url: "https://newsapi.org/v2/top-headlines?category=" + this.id + apiKey,
+    ajaxMatter(
+      "https://newsapi.org/v2/top-headlines?category=" + this.id + apiKey
+    );
+  });
+
+  function ajaxMatter(url) {
+    var configObject = {
+      url: url,
       method: "GET",
       success: function(data) {
         createNews(data);
@@ -20,8 +28,10 @@ $(document).ready(function() {
       error: function(data) {
         alertDiv.html("Cannot load news now. Please try later!!!");
       }
-    });
-  });
+    };
+
+    $.ajax(configObject);
+  }
 
   $(".container").on("click", "div", function() {
     alert("new page");
@@ -38,10 +48,6 @@ $(document).ready(function() {
       if (article.author == null) {
         article.author = "";
       }
-
-      // if(article.urlToImage == null){
-      //   article.urlToImage = url(image/default.png);
-      // }
 
       var details =
         "<div class='kingDiv inlineBlock'>" +

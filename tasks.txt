@@ -1,7 +1,6 @@
 1. by default photo if photo not appear- wip
-2. Highlight selected category which loads on site load
-3. repeatation code to be removed
-4.footer should not stick header - done
+2. Highlight selected category which loads on site load - done
+3. repeatation code to be removed - done
 8. Show animated loading message - done
 9. News detail page
 10. news search.

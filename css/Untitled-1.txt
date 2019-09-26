@@ -13,11 +13,31 @@ function(){}
 
 
 // Objects
+
+var v= 3;
+var b= {};
+
 {
     key1: number,
     key2: array,
     key3: function,
     key4: other object
 }
+
+// Ajax
+var configObject= {
+    url: ----,
+    method: -----,
+    success: ------
+};
+
+$.ajax(configObject);
+
+// Function call
+square(2);
+
+var v= 2;
+v= 3;
+square(v);
 
 
