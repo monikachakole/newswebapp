@@ -11,9 +11,11 @@ The project is developed using following tech stack-
 - Javascipt
 - HTML5
 - CSS3
+- Visual Studio Code(IDE)
 
 Roadmap for future releases
 
 - Image lazy loading
 - Pagination
 - News source filter
+- To make it responsive

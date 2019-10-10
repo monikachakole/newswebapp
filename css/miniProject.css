@@ -240,8 +240,7 @@ body {
 
 .span2 {
   color: white;
-  margin-left: 71px;
-  font-weight: bold;
+  margin-left: 16px;
   font-size: 20px;
   margin-top: 10px;
 }
@@ -260,7 +259,7 @@ body {
 }
 
 .mail {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .phoneNo {
