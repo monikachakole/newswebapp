@@ -1,15 +1,11 @@
 1. by default photo if photo not appear- wip
-2. Highlight selected category which loads on site load - done
-3. repeatation code to be removed - done
 8. Show animated loading message - done
-9. News detail page
-10. news search.
-11. add header - done
-12. open details page in same tab
-
+13.image loading should be shown- http://jquery.eisbehr.de/lazy/#features
+14. Search should be shown in All News with as message "Search results for 'xxx...'"
+15.Loading news while clicked on search button and no search found.
+16. Search bar and button UI improvement
+17. develope resume page
 
 Later- 
-
-1.image loading should be shown
 2.if youtube url play video on our site
 3.Every category should have separate url

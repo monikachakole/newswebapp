@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, orange, pink);
+  background-image: url(../images/background.jpg);
 }
 
 .box {
@@ -14,6 +14,22 @@ body {
 }
 
 /* Initial Header */
+
+#searchBar {
+  vertical-align: middle;
+}
+
+.search {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.initialHeader2 i {
+  color: white;
+  font-size: 23px;
+  border: 2px solid white;
+  padding: 4px;
+}
 
 .boxHeader {
   background: #232222;
@@ -78,6 +94,41 @@ body {
 
 /* Header End */
 
+/* Main Body */
+
+.mainBody {
+  display: flex;
+}
+
+.mainBodyCol1 {
+  flex: 1;
+  background: #fbf4f4;
+  color: #afa7a7;
+}
+
+.mainBodyCol2 {
+  flex: 4;
+}
+
+.mainBodyCol1 input {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.mainBodyCol1 label {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.label {
+  text-align: center;
+  font-size: 31px;
+  margin-top: 10px;
+}
+
+/* Main Body End */
+
 /* For Loop */
 
 .image {
@@ -86,11 +137,28 @@ body {
   object-fit: cover; /* Fit image in height:205px */
   margin-left: 50px;
   margin-top: 5px;
+  background-image: url("../images/loader2.gif");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.urldiv {
+  visibility: hidden;
+  width: 320px;
+  margin-left: 50px;
+  display: none;
 }
 
 /* For Loop End */
 
 /* JS File */
+
+#uniqueHeader {
+  font-size: 25px;
+  color: #40403e;
+  text-align: center;
+  background: white;
+}
 
 .column image {
   vertical-align: top;
@@ -126,7 +194,7 @@ body {
 
 .container {
   margin-top: 35px;
-  margin-left: 13px;
+  margin-left: 30px;
 }
 
 /* JS File End */
@@ -236,7 +304,7 @@ body {
   font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
-  color: #40403e;
+  color: white;
   margin-top: 140px;
   cursor: progress;
 }

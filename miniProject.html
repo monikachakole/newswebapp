@@ -8,7 +8,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.dop.ImageLoader.js"></script> -->
+    <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+
+    <!-- <script src="js/jquery.lazy.min.js"></script> -->
+    <!-- <script src="js/jquery.lazy.av.min.js"></script> -->
+    <!-- <script src="js/jquery.lazy.youtube.min.js"></script>  -->
   </head>
 
   <body>
@@ -16,19 +27,19 @@
       <!-- Initial Header -->
       <header class="boxHeader">
         <div class="initialHeader">
-          <span>Top Headlines</span>
-          <span>Everything</span>
-          <span>Sources</span>
-          <span>Endpoints</span>
+          <span class="headerMenu topHeadlineMenu">Top Headlines</span>
+          <span class="headerMenu allNewsMenu">News</span>
+          <span class="headerMenu aboutUsMenu">About Me</span>
         </div>
         <div class="initialHeader2">
-          <input type="text" placeholder="...Search Here..." name="search" />
+          <input type="text" placeholder="Search Here..." class="search" />
+          <i class="fa fa-search" id="searchBar"></i>
         </div>
       </header>
       <!-- Initial Header Ends -->
 
       <!-- Header -->
-      <header class="header" id="headerId">
+      <header class="header " id="headerId" id="uniqueHeader">
         <div class="navigation-menu firstDiv inBlock" id="business">
           Business
         </div>
@@ -44,8 +55,11 @@
 
       <!-- Header End -->
 
-      <div class="container inlineBlock"></div>
+      
+        <div class="container inlineBlock mainBodyCol2"></div>
+      </div>
       <div class="alert"></div>
+      <!-- Main Body End -->
 
       <!-- Footer -->
       <div class="footer">
